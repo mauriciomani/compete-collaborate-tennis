@@ -19,6 +19,10 @@ There are two continous action spaces for jumping and moving to and back from th
 #### Solving the enviroment
 The task is episodic, in order to be solve an average score of +0.5, over 100 consecutive episodes, after taking the **maximum** over both agents. After each episode, we add up the rewards that each agent received to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores, this yields a single score for each episode.
 
+<p align="center">
+  <img src="tennis-random.gif" />
+</p>
+
 ## How to install everything needed
 Create a new **conda** enviroment with Python 3.6. Using `conda create --name drlnd python=3.6; source activate drlnd`.
 Also install OpenAI Gym using `pip install gym`. Once you have done that you can automatically use enviroments such as classic control and box2d. You should clone the following repository as follows: `git clone https://github.com/udacity/deep-reinforcement-learning.git; cd deep-reinforcement-learning/python; pip install .`. Finally to create a Jupyter Notebooks Kernel (IPython Kernel) run `python -m ipykernel install --user --name drlnd --display-name "drlnd"` And go inside **p3_collab-compet** and you will find the tennis notebook. If you will like to train on AWS go to hhttps://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux_NoVis.zip
