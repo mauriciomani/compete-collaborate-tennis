@@ -32,7 +32,7 @@ Download your banana folder
 * For Windows: https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip
 
 ## How to use the code found here
-Make sure your Notebook file is on the same path as you Tennis enviroment folder, inside should contain Reacher execution files. Also we include model.py that includes Pytorch framework with 1 neural network that work for both with same architecture, 3 fully connected layers of 400 units and 300 units on hidden layers. 
+Make sure your Notebook file is on the same path as you Tennis enviroment folder, inside should contain execution files. Also we include model.py that includes Pytorch framework with 1 neural network that work for both with same architecture, 3 fully connected layers of 200 units and 150 units on hidden layers. But preety much everything needed is on the notebook. 
 
 ## More information
 So here we are going to compare last project (double jointed-arm) and this tennis project.
