@@ -2,7 +2,7 @@
 The single agent version has alrerdy been used in the double-jointed arm project. Were we had a continous action space and actor-critic method, for deterministic actions and Q-values estimates respectivelly. This time we will use **Multi Agent Deep Deterministic Policy Gradients** for more information go to the following [paper](https://arxiv.org/pdf/1706.02275.pdf). It is applicable not only to cooperative interaction but to competitive or mixed interaction involving both physical and communicative behavior,  The critic is augmented with extra information about the policies of other agents, while the actor only has access to local information. After training is completed, only the local actors are used at execution phase, acting in a decentralized manner.
 
 <p align="center">
-  <img src="image.png" />
+  <img src="images/image.png" />
 </p>
 
 ## More on DDPG
@@ -17,10 +17,10 @@ The vector observation space consist 0f 8 variables regarding position and veloc
 #### Actions
 There are two continous action spaces for jumping and moving to and back from the net.
 #### Solving the enviroment
-The task is episodic, in order to be solve an average score of +0.5, over 100 consecutive episodes, after taking the **maximum** over both agents. After each episode, we add up the rewards that each agent received to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores, this yields a single score for each episode.
+The task is episodic, in order to be solve an average score of +0.5, over 100 consecutive episodes, after taking the **maximum** over both agents. After each episode, we add up the rewards that each agent received to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores, this yields a single score for each episode. The following gif is an example of random actions by both agents:
 
 <p align="center">
-  <img src="tennis-random.gif" />
+  <img src="images/tennis-random.gif" />
 </p>
 
 ## How to install everything needed
@@ -36,4 +36,10 @@ Make sure your Notebook file is on the same path as you Tennis enviroment folder
 
 ## More information
 So here we are going to compare last project (double jointed-arm) and this tennis project.
-First the importance of **sharing replay buffer**, I did not find an easy way to separate DDPG, MADDPG, Neural Network and training place. Makes sense, since we want both agents to learn quite similar. I did not use grad clipping nor epsilon and epsilon decay, since both agents were not learning. For more information on my recommendations to improve Multi agent deep deterministic policy gradients visit report.
+First the importance of **sharing replay buffer**, I did not find an easy way to separate DDPG, MADDPG, Neural Network and training place scripts (more modular code). Makes sense, since we want both agents to learn quite similar. I did not use grad clipping nor epsilon or epsilon decay, since both agents were not learning. For more information on my recommendations to improve Multi agent deep deterministic policy gradients visit report.
+
+## Solved Enviroment
+Stopping over +0.5 we got the fopllowing results!<br>
+<p align="center">
+  <img src="images/solved_env.gif" />
+</p>
